@@ -1,0 +1,217 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle, #ff5f6d, #ffc371); /* Radial gradient for depth */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #fefefe; /* Light text for contrast */
+    animation: backgroundAnimation 30s linear infinite; /* Longer background animation */
+}
+
+/* Dynamic background animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.container {
+    max-width: 1200px; /* Slightly reduced width */
+    width: 90%; /* Responsive width */
+    background: rgba(26, 26, 46, 0.9); /* Darker background with transparency */
+    padding: 40px; /* Reduced padding for a more compact look */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Slightly lighter shadow */
+    border: 4px solid #0f3460; /* Slightly thinner border */
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Softer frosted glass effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transitions */
+}
+
+.container:hover {
+    transform: scale(1.03); /* Slightly smaller scale on hover */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7); /* Slightly lighter shadow on hover */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px; /* Reduced spacing */
+}
+
+header h1 {
+    color: #e94560; /* Bright color for header */
+    font-size: 2.8rem; /* Reduced font size */
+    margin: 0;
+    letter-spacing: 3px; /* Slightly reduced spacing */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Less intense shadow */
+    animation: textGlow 3s ease-in-out infinite alternate; /* Slower glowing text effect */
+}
+
+/* Glowing text animation */
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px rgba(233, 69, 96, 0.6), 0 0 20px rgba(233, 69, 96, 0.4); }
+    to { text-shadow: 0 0 20px rgba(233, 69, 96, 0.9), 0 0 30px rgba(233, 69, 96, 0.6); }
+}
+
+a {
+    color: #ffeb3b; /* Bright yellow for visibility */
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+a:hover, a:focus {
+    color: #e94560; /* Change color on hover/focus */
+    text-shadow: 0 0 8px rgba(233, 69, 96, 0.8); /* Enhanced glow effect */
+    text-decoration: underline; /* Underline on hover */
+}
+
+a:active {
+    color: #d32f2f; /* Darker red when link is active */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Reduced gap */
+}
+
+.search-container {
+    width: 100%;
+    max-width: 700px; /* Slightly reduced max-width */
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+#search {
+    width: 100%;
+    padding: 15px; /* Reduced padding */
+    font-size: 1.2rem; /* Slightly smaller font size */
+    border-radius: 25px; /* Rounded corners */
+    border: none; /* No border */
+    background: rgba(22, 36, 71, 0.85); /* Darker background with slight transparency */
+    color: #fff; /* White text */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Lighter shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+#search:focus {
+    transform: scale(1.05); /* Slight scaling on focus */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+    outline: none; /* No outline */
+}
+
+.player-list {
+    width: 100%;
+    max-height: 600px; /* Reduced height */
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Reduced gap */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.player-card {
+    background: linear-gradient(135deg, #0f3460, #53354a); /* Gradient background */
+    border: 4px solid #e94560; /* Slightly thinner border */
+    border-radius: 20px; /* Slightly less rounded corners */
+    padding: 25px; /* Reduced padding */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Lighter shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    flex: 1 1 calc(33.333% - 25px); /* Fluid grid layout with adjusted spacing */
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff; /* White text */
+}
+
+.player-card:hover {
+    transform: rotate(-3deg) scale(1.08); /* Slightly smaller rotation and scaling */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+}
+
+.player-card h2 {
+    margin: 0 0 15px; /* Reduced margin */
+    font-size: 1.8rem; /* Slightly smaller font size */
+    color: #ffc371; /* Bright heading color */
+    letter-spacing: 1.5px; /* Reduced spacing */
+    text-transform: uppercase;
+}
+
+.player-card p {
+    margin: 10px 0; /* Reduced margin */
+    color: #fefefe; /* Light grey text */
+}
+
+.player-details {
+    display: none;
+    margin-top: 15px; /* Reduced margin */
+    font-size: 1rem; /* Slightly smaller text size */
+    color: #d1d1e9; /* Soft grey text */
+    border-top: 1px solid #e94560; /* Bright border */
+    padding-top: 15px; /* Reduced padding */
+}
+
+.player-details .detail-box {
+    background: rgba(26, 26, 46, 0.8); /* Darker transparent background */
+    border: 1px solid #53354a;
+    border-radius: 20px; /* Slightly less rounded corners */
+    padding: 20px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px; /* Reduced spacing */
+}
+
+footer p {
+    color: #d1d1e9; /* Soft grey text */
+}
+
+footer a {
+    color: #ffeb3b; /* Bright yellow for visibility */
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+footer a:hover, footer a:focus {
+    color: #e94560; /* Change color on hover/focus */
+    text-shadow: 0 0 8px rgba(233, 69, 96, 0.8); /* Enhanced glow effect */
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer a:active {
+    color: #d32f2f; /* Darker red when link is active */
+}
+
+@media (max-width: 768px) {
+    .player-list {
+        max-height: 500px; /* Adjusted height for smaller screens */
+    }
+
+    .player-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+
+    header h1 {
+        font-size: 2.4rem; /* Reduced font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .player-card {
+        flex: 1 1 100%; /* Full width on smallest screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Further reduced font size */
+    }
+}
